@@ -191,7 +191,7 @@ $build_dir/node_modules/.bin/bower install
     fi
 
     status "Running grunt heroku:$NODE_ENV task"
-    $build_dir/node_modules/.bin/grunt heroku:$NODE_ENV
+    PATH="$build_dir/vendor/node/bin:$build_dir/bin:$build_dir/node_modules/.bin:$PATH" $build_dir/node_modules/.bin/grunt heroku:$NODE_ENV
   fi
 )
 
