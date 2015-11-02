@@ -175,7 +175,7 @@ echo "export PATH=\"\$HOME/.gem/ruby/1.9.1/bin:\$PATH\"" > $build_dir/.profile.d
 
 # install bower
 status "Install bower dependencies"
-PATH="$build_dir/vendor/node/bin:$build_dir/bin:$build_dir/node_modules/.bin:$PATH" bower install --config.storage.packages=vendor/bower/packages --config.storage.registry=vendor/bower/registry --config.tmp=vendor/bower/tmp
+$build_dir/node_modules/.bin/bower install
 
 # Check and run Grunt
 (
